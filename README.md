@@ -42,7 +42,7 @@ It has both world united.. more or less:
     -v /path/to/vpnconfigfolder:/vpn \
     -v /docker/appdata/jdownloader-2:/config:rw \
     -v $HOME/Downloads:/output:rw \
-    -d -p 5800:5800
+    -d -p 5800:5800 h1f0x/jd2-openvpn
     
     docker stop jd2-openvpn
     
