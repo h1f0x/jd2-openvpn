@@ -1,6 +1,3 @@
-#FROM alpine
-#MAINTAINER David Personette <dperson@gmail.com>
-
 # NOTE: glibc version of the image is needed for the 7-Zip-JBinding workaround.
 FROM jlesage/baseimage-gui:alpine-3.8-glibc-v3.5.1
 
