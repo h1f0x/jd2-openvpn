@@ -44,14 +44,9 @@ It has both world united.. more or less:
     -v $HOME/Downloads:/output:rw \
     -d -p 5800:5800 h1f0x/jd2-openvpn
       
-    
-If you want do have MyJDowanloader right away, modify the following file:
+Please wait for about 1 minute. There are some sleeps needed in order to properly start up the vpn and jDownloader.
 
-    vi /docker/appdata/jdownloader-2/org.jdownloader.api.myjdownloader.MyJDownloaderSettings.json
-    
-    { "email" : "your@mailaddress.com", "password" : "yourpassword" }
-  
-After that you need to restart the container.
+My jDownloader can be configured over http://localhost:5800
     
 # Advanced Settings
 All options of both base images are available, but you need to modify the Dockerfile if you want to modify your VPN configuration. The command to execute the the VPN is added during the build of the image as cronjob.
@@ -62,3 +57,10 @@ To add the --dns or --firewall flag you need to recreate the image your self wit
     RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/openvpn.sh"; } | crontab -
     
 In the configuration documentation can be found at the repo of dperson/openvpn-client.
+
+There is another crontab entry which will grap the current external ip address and print it with a timestamp into a logfile:
+
+    # crontab to run vpn continousily
+    RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/currentip.sh"; } | crontab -
+    
+The script will write the output to: /vpn/current_external_ip.txt

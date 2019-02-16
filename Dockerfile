@@ -58,6 +58,7 @@ RUN apk --no-cache --no-progress upgrade && \
 
 # crontab to run vpn continousily
 RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/openvpn.sh"; } | crontab -
+RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/currentip.sh"; } | crontab -
 
 # Set environment variables.
 ENV APP_NAME="JDownloader 2" \
