@@ -5,6 +5,8 @@ This image is a merge of two already existing docker images:
 - dperson/openvpn-client (https://github.com/dperson/openvpn-client)
 - jlesage/docker-jdownloader-2 (https://github.com/jlesage/docker-jdownloader-2)
 
+Plexguide Compose YML at: https://github.com/h1f0x/jd2-openvpn-plexguide
+
 
 # What to expect of this image?
 
