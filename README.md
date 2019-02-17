@@ -32,6 +32,17 @@ It has both world united.. more or less:
 - localhost:5800 is available and running even when the vpn is up
 - the vpn only works with an OpenVPN configuration file (also works with automatic auth)
 
+# Prepare OpenVPN configuration
+1. Add the following lines to your custom OpenVPN config:
+
+
+    script-security 2
+    up /etc/openvpn/up.sh
+    down /etc/openvpn/down.sh
+
+    # Example of an ExpressVPN configuration in ./example/example.config.ovpn
+
+
 # How do you run it?
 
     cp /path/from/config.ovpn /path/to/vpnconfigfolder/config.ovpn
