@@ -32,6 +32,7 @@ is_jd_running() {
 }
 
 start_jd() {
+
     /opt/jre/bin/java \
         -Dawt.useSystemAAFontSettings=gasp \
         -Djava.awt.headless=false \

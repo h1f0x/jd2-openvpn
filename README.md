@@ -77,3 +77,7 @@ There is another crontab entry which will grap the current external ip address a
     RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/currentip.sh"; } | crontab -
     
 The script will write the output to: /vpn/current_external_ip.txt
+
+# Patch Notes
+
+- 23.03.2019: Added new 7zip binding: 15.06-2.01beta

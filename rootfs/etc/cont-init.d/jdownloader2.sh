@@ -15,6 +15,9 @@ if [ ! -f /config/JDownloader.jar ]; then
     cp -r /defaults/cfg /config/
 fi
 
+cp -rf /defaults/patches/7zip/sevenzipjbinding1509.jar /config/libs/sevenzipjbinding.jar
+cp -rf /defaults/patches/7zip/sevenzipjbinding1509Linux.jar /config/libs/sevenzipjbindingLinux.jar
+
 # Take ownership of the config directory content.
 find /config -mindepth 1 -exec chown $USER_ID:$GROUP_ID {} \;
 
