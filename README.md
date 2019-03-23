@@ -7,6 +7,9 @@ This image is a merge of two already existing docker images:
 
 Plexguide Compose YML at: https://github.com/h1f0x/jd2-openvpn-plexguide
 
+## Patch Notes
+
+- 23.03.2019: Added new 7zip binding: 15.06-2.01beta
 
 # What to expect of this image?
 
@@ -77,7 +80,3 @@ There is another crontab entry which will grap the current external ip address a
     RUN crontab -l | { cat; echo "*       *       *       *       *       /usr/bin/currentip.sh"; } | crontab -
     
 The script will write the output to: /vpn/current_external_ip.txt
-
-# Patch Notes
-
-- 23.03.2019: Added new 7zip binding: 15.06-2.01beta
