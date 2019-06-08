@@ -8,7 +8,7 @@ log() {
 }
 
 # Make sure mandatory directories exist.
-mkdir -p /config/logs
+mkdir -p /config/logs /config/libs/
 
 if [ ! -f /config/JDownloader.jar ]; then
     cp /defaults/JDownloader.jar /config
